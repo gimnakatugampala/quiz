@@ -1,0 +1,96 @@
+.choice-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235,0.25);
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.6);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix{
+    padding: 1.5rem;
+}
+
+.choice-text{
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/*Progress Bar*/
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.3rem solid white;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.6);
+    margin-top: 1.5rem;
+}
+
+#progressBarFull{
+    height: 2.4rem;
+    background-color: white;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.6);
+    width: 0%;
+}
+
+
+/*Hud*/
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.hud-main-text{
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/*Loader*/
+#loading{
+    border: 1.6rem solid white;
+    border-radius: 50%;
+    border-top: 1.6rem solid transparent;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/*Media Queries*/
+@media(max-width:1000px){
+    .container{
+        padding: 1rem;
+    }
+    #hud{
+        display: flex;
+        flex-direction: column;
+    }
+    .hud-prefix{
+        padding: 1rem;
+    }
+    h2{
+        margin-top: -3rem;
+    }
+
+}
