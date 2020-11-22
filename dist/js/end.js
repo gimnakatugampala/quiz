@@ -22,7 +22,7 @@ function saveHighScores(e){
     e.preventDefault();
 
     const score = {
-        score:Math.floor(Math.random() * 100),
+        score:mostRecentScore,
         name:username.value
     }
 
@@ -35,5 +35,6 @@ function saveHighScores(e){
 
     localStorage.setItem('highscore',JSON.stringify(highScores));
     username.value = '';
+    window.location.assign('/dist/index.html')
     console.log(highScores)
 }
